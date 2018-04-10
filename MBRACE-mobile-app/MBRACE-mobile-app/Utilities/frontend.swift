@@ -21,8 +21,8 @@ class AppUtilities {
         /* Starts an activity indicator on the view passed to the method
          
          args:
-         view: UIView
-         text: str (text to show while loading)
+         - view: UIView
+         - text: str (text to show while loading)
          */
         blurEffectView.effect = self.blurEffect
         blurEffectView.frame = view.bounds
@@ -60,5 +60,12 @@ class AppUtilities {
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.blue.cgColor
+    }
+    
+    func showDefaultAlertWithCloseAction(controller: UIViewController, title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let closeAction = UIAlertAction(title: "Close", style: .default, handler: nil)
+        alert.addAction(closeAction)
+        controller.present(alert, animated: true, completion: nil)
     }
 }

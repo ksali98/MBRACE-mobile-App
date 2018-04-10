@@ -8,7 +8,11 @@
 
 import UIKit
 
+// Constant to access front end design features
 let appUtils = AppUtilities()
+
+// Global Variables
+var serverInfo = ServerInformation()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

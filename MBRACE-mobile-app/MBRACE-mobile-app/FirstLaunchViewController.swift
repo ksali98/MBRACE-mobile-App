@@ -10,12 +10,15 @@ import UIKit
 
 class FirstLaunchViewController: UIViewController {
 
+    // Class variables
     @IBOutlet weak var startButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Add button effects
         appUtils.addButtonFeatures(button: self.startButton)
     }
 
@@ -25,6 +28,8 @@ class FirstLaunchViewController: UIViewController {
     }
 
     @IBAction func startAction(_ sender: Any) {
-        // TODO: Dispatch to settings view controller
+        // Dispatches to setup settings view controller
+        let settings = self.storyboard?.instantiateViewController(withIdentifier: "SetupViewController") as! SetupViewController
+        self.present(settings, animated: true, completion: nil)
     }
 }

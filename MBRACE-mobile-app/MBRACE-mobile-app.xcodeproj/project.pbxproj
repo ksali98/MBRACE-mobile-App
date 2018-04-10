@@ -14,6 +14,8 @@
 		D73F84F3207C644D006B0CA4 /* frontend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84F2207C644D006B0CA4 /* frontend.swift */; };
 		D73F84F8207C67AB006B0CA4 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84F7207C67AB006B0CA4 /* FirstLaunchViewController.swift */; };
 		D73F84FA207C6941006B0CA4 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84F9207C6941006B0CA4 /* SetupViewController.swift */; };
+		D73F84FC207C6FC9006B0CA4 /* backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84FB207C6FC9006B0CA4 /* backend.swift */; };
+		D73F84FE207C77DD006B0CA4 /* SuccessfulSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84FD207C77DD006B0CA4 /* SuccessfulSetupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D73F84F2207C644D006B0CA4 /* frontend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frontend.swift; sourceTree = "<group>"; };
 		D73F84F7207C67AB006B0CA4 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
 		D73F84F9207C6941006B0CA4 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		D73F84FB207C6FC9006B0CA4 /* backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backend.swift; sourceTree = "<group>"; };
+		D73F84FD207C77DD006B0CA4 /* SuccessfulSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulSetupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				75801F31206AD25D0023391A /* Info.plist */,
 				D73F84F7207C67AB006B0CA4 /* FirstLaunchViewController.swift */,
 				D73F84F9207C6941006B0CA4 /* SetupViewController.swift */,
+				D73F84FD207C77DD006B0CA4 /* SuccessfulSetupViewController.swift */,
 			);
 			path = "MBRACE-mobile-app";
 			sourceTree = "<group>";
@@ -74,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				D73F84F2207C644D006B0CA4 /* frontend.swift */,
+				D73F84FB207C6FC9006B0CA4 /* backend.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -151,6 +157,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D73F84FA207C6941006B0CA4 /* SetupViewController.swift in Sources */,
+				D73F84FC207C6FC9006B0CA4 /* backend.swift in Sources */,
+				D73F84FE207C77DD006B0CA4 /* SuccessfulSetupViewController.swift in Sources */,
 				D73F84F8207C67AB006B0CA4 /* FirstLaunchViewController.swift in Sources */,
 				75801F26206AD25D0023391A /* AppDelegate.swift in Sources */,
 				D73F84F3207C644D006B0CA4 /* frontend.swift in Sources */,
