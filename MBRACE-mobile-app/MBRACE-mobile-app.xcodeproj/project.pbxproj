@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		75801F26206AD25D0023391A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75801F25206AD25D0023391A /* AppDelegate.swift */; };
-		75801F28206AD25D0023391A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75801F27206AD25D0023391A /* ViewController.swift */; };
 		75801F2B206AD25D0023391A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75801F29206AD25D0023391A /* Main.storyboard */; };
 		75801F2D206AD25D0023391A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75801F2C206AD25D0023391A /* Assets.xcassets */; };
 		75801F30206AD25D0023391A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75801F2E206AD25D0023391A /* LaunchScreen.storyboard */; };
+		D73F84F3207C644D006B0CA4 /* frontend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84F2207C644D006B0CA4 /* frontend.swift */; };
+		D73F84F8207C67AB006B0CA4 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84F7207C67AB006B0CA4 /* FirstLaunchViewController.swift */; };
+		D73F84FA207C6941006B0CA4 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84F9207C6941006B0CA4 /* SetupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		75801F22206AD25D0023391A /* MBRACE-mobile-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MBRACE-mobile-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75801F25206AD25D0023391A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75801F27206AD25D0023391A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		75801F2A206AD25D0023391A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75801F2C206AD25D0023391A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75801F2F206AD25D0023391A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75801F31206AD25D0023391A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D73F84F2207C644D006B0CA4 /* frontend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frontend.swift; sourceTree = "<group>"; };
+		D73F84F7207C67AB006B0CA4 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
+		D73F84F9207C6941006B0CA4 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,24 @@
 		75801F24206AD25D0023391A /* MBRACE-mobile-app */ = {
 			isa = PBXGroup;
 			children = (
+				D73F84F4207C6452006B0CA4 /* Utilities */,
 				75801F25206AD25D0023391A /* AppDelegate.swift */,
-				75801F27206AD25D0023391A /* ViewController.swift */,
 				75801F29206AD25D0023391A /* Main.storyboard */,
 				75801F2C206AD25D0023391A /* Assets.xcassets */,
 				75801F2E206AD25D0023391A /* LaunchScreen.storyboard */,
 				75801F31206AD25D0023391A /* Info.plist */,
+				D73F84F7207C67AB006B0CA4 /* FirstLaunchViewController.swift */,
+				D73F84F9207C6941006B0CA4 /* SetupViewController.swift */,
 			);
 			path = "MBRACE-mobile-app";
+			sourceTree = "<group>";
+		};
+		D73F84F4207C6452006B0CA4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D73F84F2207C644D006B0CA4 /* frontend.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75801F28206AD25D0023391A /* ViewController.swift in Sources */,
+				D73F84FA207C6941006B0CA4 /* SetupViewController.swift in Sources */,
+				D73F84F8207C67AB006B0CA4 /* FirstLaunchViewController.swift in Sources */,
 				75801F26206AD25D0023391A /* AppDelegate.swift in Sources */,
+				D73F84F3207C644D006B0CA4 /* frontend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
