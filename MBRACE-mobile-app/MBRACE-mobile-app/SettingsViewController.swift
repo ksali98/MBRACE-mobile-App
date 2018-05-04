@@ -1,27 +1,31 @@
 //
-//  SetupViewController.swift
+//  SettingsViewController.swift
 //  MBRACE-mobile-app
 //
-//  Created by Dev on 4/9/18.
+//  Created by Dev on 4/21/18.
 //  Copyright © 2018 Kamal Ali. All rights reserved.
 //
 
 import UIKit
 
-class SetupViewController: UIViewController {
-    /* View controller class used to set up the server information */
+class SettingsViewController: UIViewController {
+    /* View controller class to modify server connection parameters */
 
-    // Class atributes
+    // View controller outlets
     @IBOutlet weak var hostname: UITextField!
     @IBOutlet weak var port: UITextField!
-    @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        // Add button effects
-        effectUtils.addButtonFeatures(button: self.saveButton)
+        self.title = "Settings"
+        
+        // Update fields with current hostname and port
+        self.hostname.text = serverInfo.hostname
+        if serverInfo.port != 0 || serverInfo.port != -1 {
+            self.port.text = String(serverInfo.port)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,12 +34,12 @@ class SetupViewController: UIViewController {
     }
     
     @IBAction func saveAction(_ sender: Any) {
-        /* Action method to save changes made to server settings
+        /* Method to save new server information settings
          
          args:
             - sender (Any)
          returns:
-            - void
+            Void
          */
         if ((self.hostname.text?.isEmpty)!) {
             // Host name has not be set
@@ -50,7 +54,7 @@ class SetupViewController: UIViewController {
             let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { action in
                 serverInfo.hostname = self.hostname.text!
                 serverInfo.port = -1
-                self.showSuccessController()
+                self.navigationController?.popViewController(animated: true)
             })
             // Create no action
             let noAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
@@ -64,19 +68,8 @@ class SetupViewController: UIViewController {
             // Using both hostname and port
             serverInfo.hostname = self.hostname.text!
             serverInfo.port = Int(self.port.text!)!
-            self.showSuccessController()
+            self.navigationController?.popViewController(animated: true)
         }
     }
     
-    func showSuccessController() {
-        /* Method to present the successful setup view controller
-         
-         args:
-            None
-         returns:
-            - void
-         */
-        let success = self.storyboard?.instantiateViewController(withIdentifier: "SuccessfulSetupViewController") as! SuccessfulSetupViewController
-        self.present(success, animated: true, completion: nil)
-    }
 }

@@ -11,11 +11,15 @@
 		75801F2B206AD25D0023391A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75801F29206AD25D0023391A /* Main.storyboard */; };
 		75801F2D206AD25D0023391A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75801F2C206AD25D0023391A /* Assets.xcassets */; };
 		75801F30206AD25D0023391A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75801F2E206AD25D0023391A /* LaunchScreen.storyboard */; };
-		D73F84F3207C644D006B0CA4 /* frontend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84F2207C644D006B0CA4 /* frontend.swift */; };
+		D73F84F3207C644D006B0CA4 /* effectUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84F2207C644D006B0CA4 /* effectUtilities.swift */; };
 		D73F84F8207C67AB006B0CA4 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84F7207C67AB006B0CA4 /* FirstLaunchViewController.swift */; };
 		D73F84FA207C6941006B0CA4 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84F9207C6941006B0CA4 /* SetupViewController.swift */; };
-		D73F84FC207C6FC9006B0CA4 /* backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84FB207C6FC9006B0CA4 /* backend.swift */; };
+		D73F84FC207C6FC9006B0CA4 /* server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84FB207C6FC9006B0CA4 /* server.swift */; };
 		D73F84FE207C77DD006B0CA4 /* SuccessfulSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F84FD207C77DD006B0CA4 /* SuccessfulSetupViewController.swift */; };
+		D77A55C6208BE11900BB9EB6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77A55C5208BE11900BB9EB6 /* SettingsViewController.swift */; };
+		D77A55C8208C414F00BB9EB6 /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77A55C7208C414F00BB9EB6 /* SelectDateViewController.swift */; };
+		D7DE6F27207EED9C00250BE7 /* csvparser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DE6F26207EED9C00250BE7 /* csvparser.swift */; };
+		D7F492722087A66500BD2B4E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F492712087A66500BD2B4E /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +29,15 @@
 		75801F2C206AD25D0023391A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75801F2F206AD25D0023391A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75801F31206AD25D0023391A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D73F84F2207C644D006B0CA4 /* frontend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frontend.swift; sourceTree = "<group>"; };
+		D73F84F2207C644D006B0CA4 /* effectUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = effectUtilities.swift; sourceTree = "<group>"; };
 		D73F84F7207C67AB006B0CA4 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
 		D73F84F9207C6941006B0CA4 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
-		D73F84FB207C6FC9006B0CA4 /* backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backend.swift; sourceTree = "<group>"; };
+		D73F84FB207C6FC9006B0CA4 /* server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = server.swift; sourceTree = "<group>"; };
 		D73F84FD207C77DD006B0CA4 /* SuccessfulSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulSetupViewController.swift; sourceTree = "<group>"; };
+		D77A55C5208BE11900BB9EB6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D77A55C7208C414F00BB9EB6 /* SelectDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
+		D7DE6F26207EED9C00250BE7 /* csvparser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = csvparser.swift; sourceTree = "<group>"; };
+		D7F492712087A66500BD2B4E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,9 @@
 				D73F84F7207C67AB006B0CA4 /* FirstLaunchViewController.swift */,
 				D73F84F9207C6941006B0CA4 /* SetupViewController.swift */,
 				D73F84FD207C77DD006B0CA4 /* SuccessfulSetupViewController.swift */,
+				D7F492712087A66500BD2B4E /* MenuViewController.swift */,
+				D77A55C5208BE11900BB9EB6 /* SettingsViewController.swift */,
+				D77A55C7208C414F00BB9EB6 /* SelectDateViewController.swift */,
 			);
 			path = "MBRACE-mobile-app";
 			sourceTree = "<group>";
@@ -78,8 +89,9 @@
 		D73F84F4207C6452006B0CA4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				D73F84F2207C644D006B0CA4 /* frontend.swift */,
-				D73F84FB207C6FC9006B0CA4 /* backend.swift */,
+				D73F84F2207C644D006B0CA4 /* effectUtilities.swift */,
+				D73F84FB207C6FC9006B0CA4 /* server.swift */,
+				D7DE6F26207EED9C00250BE7 /* csvparser.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -157,11 +169,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D73F84FA207C6941006B0CA4 /* SetupViewController.swift in Sources */,
-				D73F84FC207C6FC9006B0CA4 /* backend.swift in Sources */,
+				D7F492722087A66500BD2B4E /* MenuViewController.swift in Sources */,
+				D77A55C6208BE11900BB9EB6 /* SettingsViewController.swift in Sources */,
+				D73F84FC207C6FC9006B0CA4 /* server.swift in Sources */,
 				D73F84FE207C77DD006B0CA4 /* SuccessfulSetupViewController.swift in Sources */,
 				D73F84F8207C67AB006B0CA4 /* FirstLaunchViewController.swift in Sources */,
+				D77A55C8208C414F00BB9EB6 /* SelectDateViewController.swift in Sources */,
 				75801F26206AD25D0023391A /* AppDelegate.swift in Sources */,
-				D73F84F3207C644D006B0CA4 /* frontend.swift in Sources */,
+				D7DE6F27207EED9C00250BE7 /* csvparser.swift in Sources */,
+				D73F84F3207C644D006B0CA4 /* effectUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

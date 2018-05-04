@@ -8,17 +8,18 @@
 
 import UIKit
 
-// Constant to access front end design features
-let appUtils = AppUtilities()
+// Global constant attributes
+let effectUtils = EffectUtilities()
+let serverConn = ServerConnection()
+let serverDataFilePrefix = "B4:E6:2D:15:87:C6"
 
-// Global Variables
+// Global attributes
 var serverInfo = ServerInformation()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -46,7 +47,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

@@ -17,9 +17,8 @@ class SuccessfulSetupViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         // Add button effects
-        appUtils.addButtonFeatures(button: self.connectButton)
+        effectUtils.addButtonFeatures(button: self.connectButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +27,14 @@ class SuccessfulSetupViewController: UIViewController {
     }
 
     @IBAction func connectAction(_ sender: Any) {
-        // TODO: Dispatch to main dashboard view controller
+        /* Action method to navigate to main menu navigation controller
+         
+         args:
+            - sender (Any)
+         returns:
+            - void
+         */
+        let menuNav = self.storyboard?.instantiateViewController(withIdentifier: "mainNavController") as! UINavigationController
+        self.present(menuNav, animated: true, completion: nil)
     }
 }
