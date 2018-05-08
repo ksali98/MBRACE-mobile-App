@@ -170,20 +170,30 @@ class SelectDateViewController: UIViewController, UIPickerViewDelegate, URLSessi
          returns:
             - void
          */
+        let documentsDirectoryURL =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let destinationFileUrl = documentsDirectoryURL.appendingPathComponent("tempdata.csv")
+        
+        // Check if file already exists at destination
+        do {
+            if FileManager.default.fileExists(atPath: destinationFileUrl.path) {
+                try FileManager.default.removeItem(at: destinationFileUrl)
+            }
+        } catch let error {
+            print("Error removing file: \(error.localizedDescription)")
+        }
+        
+        // Try to copy file from temp location to destination url
+        do {
+            try FileManager.default.copyItem(at: location, to: destinationFileUrl)
+        } catch let error {
+            print("Error copying file: \(error.localizedDescription)")
+        }
+        
         DispatchQueue.main.async {
             effectUtils.stop_progress_bar()
-            
-            // Find local documents directory and create destination file url to be copied to
-            let documentsUrl:URL =  (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL?)!
-            let destinationFileUrl = documentsUrl.appendingPathComponent("tempdata.csv")
-            
-            // Try to copy file from temp location to destination url
-            do {
-                try FileManager.default.copyItem(at: location, to: destinationFileUrl)
-                // TODO: open graph view controller and pass file location
-            } catch let error {
-                print("Error copying file: \(error.localizedDescription)")
-            }
+            let selectObjectvc = self.storyboard?.instantiateViewController(withIdentifier: "SelectObjectViewController") as! SelectObjectViewController
+            selectObjectvc.filepath = destinationFileUrl.path
+            self.navigationController?.pushViewController(selectObjectvc, animated: true)
         }
     }
 }

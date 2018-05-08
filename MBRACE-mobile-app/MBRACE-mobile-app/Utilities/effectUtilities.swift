@@ -123,7 +123,7 @@ class EffectUtilities {
         view.addSubview(progressbar)
         
         // Start ignoring user interaction
-        UIApplication.shared.beginIgnoringInteractionEvents()
+        // UIApplication.shared.beginIgnoringInteractionEvents()
     }
     
     func stop_progress_bar() {
@@ -141,7 +141,7 @@ class EffectUtilities {
         blurEffectView.removeFromSuperview()
         
         // Resume user interaction
-        UIApplication.shared.endIgnoringInteractionEvents()
+        // UIApplication.shared.endIgnoringInteractionEvents()
     }
     
     func update_progress_bar(progress: Float) {

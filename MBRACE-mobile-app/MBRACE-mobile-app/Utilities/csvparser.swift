@@ -70,7 +70,11 @@ class CSVDataParser {
         
         for row in rows {
             // Get columns from current row
+            if row.isEmpty {
+                continue
+            }
             let cols = row.components(separatedBy: ",")
+            
             if self.object_count == nil {
                 // Set the object count if it hasn't been set yet
                 // The object count will be the nunbmer of columns in the data (Column count should be uniform for each row)

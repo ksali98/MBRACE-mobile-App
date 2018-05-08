@@ -62,7 +62,7 @@ class ServerConnection {
         self.session.dataTask(with: urlRequest, completionHandler: { data, response, error in
             // Check if error occured
             guard error == nil else {
-                print("Error: \(error?.localizedDescription)")
+                print("Error: \(error?.localizedDescription ?? "Can't find error description")")
                 completion(nil)
                 return
             }
