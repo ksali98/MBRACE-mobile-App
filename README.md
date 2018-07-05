@@ -48,5 +48,5 @@ Please do not polute the project with unnecessary code and information.
 ## Ownership
 
 Kamal Ali
-Technology Dept.
-Jackson State University
+- Technology Dept.
+- Jackson State University
