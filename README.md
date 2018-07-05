@@ -8,10 +8,10 @@ Make sure you are running the latest version of Xcode.
 
 In order to build, complete the following steps:
 
-• Download/clone the project.
-• Open up the project in xcode.
-• Set up the charts framework (Details in the section below).
-• Build and run the project.
+1. Download/clone the project.
+2. Open up the project in xcode.
+3. Set up the charts framework (Details in the section below).
+4. Build and run the project.
 
 ## Charting
 
@@ -22,9 +22,9 @@ The `Charts` framework github can be found at https://github.com/danielgindi/Cha
 
 In order to successfully build the project, you must complete the following steps:
 
-• Download/clone the github project at the link above.
-• Find the `Charts.xcodeproj` inside of the project directory.
-• Drag the `Charts.xcodeproj` under the `MBRACE-mobile-app` executable in xcode so that the file hierarchy looks similar to whats below:
+1. Download/clone the github project at the link above.
+2. Find the `Charts.xcodeproj` inside of the project directory.
+3. Drag the `Charts.xcodeproj` under the `MBRACE-mobile-app` executable in xcode so that the file hierarchy looks similar to whats below:
 
 ```
 MBRACE-mobile-app
@@ -35,8 +35,8 @@ MBRACE-mobile-app
 |	Products
 ```
 
-• Make sure the `Charts` framework is added to the list of Embedded Binaries and Linked Frameworks and Libraries.
-• Done :)
+4. Make sure the `Charts` framework is added to the list of Embedded Binaries and Linked Frameworks and Libraries.
+5. Done :)
 
 ## Contributing
 
