@@ -92,7 +92,7 @@ class SelectDateViewController: UIViewController, UIPickerViewDelegate, URLSessi
         if (serverInfo.port == 0 || serverInfo.port == -1) {
             url = "http://\(serverInfo.hostname)/data_collector/\(filename)"
         } else {
-            url = "http://\(serverInfo.hostname)/data_collector/\(filename)"
+            url = "http://\(serverInfo.hostname):\(serverInfo.port)/data_collector/\(filename)"
         }
         let nsurl = URL(string: url)
         let urlRequest = URLRequest(url: nsurl!)

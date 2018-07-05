@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetupViewController: UIViewController {
+class SetupViewController: UIViewController, UITextFieldDelegate {
     /* View controller class used to set up the server information */
 
     // Class atributes
@@ -22,6 +22,8 @@ class SetupViewController: UIViewController {
         // Do any additional setup after loading the view.
         // Add button effects
         effectUtils.addButtonFeatures(button: self.saveButton)
+        self.hostname.delegate = self
+        self.port.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,5 +80,10 @@ class SetupViewController: UIViewController {
          */
         let success = self.storyboard?.instantiateViewController(withIdentifier: "SuccessfulSetupViewController") as! SuccessfulSetupViewController
         self.present(success, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
 }

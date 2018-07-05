@@ -11,17 +11,23 @@ import Charts
 
 class LineChartTimeViewController: DemoBaseViewController {
     @IBOutlet var chartView: LineChartView!
-    @IBOutlet var sliderX: UISlider!
-    @IBOutlet var sliderTextX: UITextField!
+    @IBOutlet weak var currentTimeViewingLabel: UILabel!
     
     var data: [Any]!
     var objectIndex: Int!
+    var current_position: Int!
+    var total_item_count: Int!
+    var subset_item_count: Int!
+    var start_index: Int!
+    var end_index: Int!
+    
+    // Constants
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.title = "Line Chart 2"
+        self.title = "Analyis for Object \(self.objectIndex + 1)"
         self.options = [.toggleValues,
                         .toggleFilled,
                         .toggleCircles,
@@ -70,15 +76,21 @@ class LineChartTimeViewController: DemoBaseViewController {
         leftAxis.yOffset = -9
         leftAxis.labelTextColor = UIColor(red: 255/255, green: 192/255, blue: 56/255, alpha: 1)
 
-        
         chartView.rightAxis.enabled = false
         
         chartView.legend.form = .line
-        
-        sliderX.value = 100
-        slidersValueChanged(nil)
-        
         chartView.animate(xAxisDuration: 2.5)
+        
+        if (self.data != nil) {
+            self.current_position = 1
+            self.total_item_count = self.data.count
+            self.subset_item_count = Int(self.total_item_count / 4)
+            self.updateChartData()
+        } else {
+            // Set data count checks for nil as well and reports an error message
+            // So we use it here
+            self.setDataCount()
+        }
     }
     
     override func updateChartData() {
@@ -86,23 +98,50 @@ class LineChartTimeViewController: DemoBaseViewController {
             chartView.data = nil
             return
         }
+        self.currentTimeViewingLabel.text = CURRENT_TIME_VIEW_STRINGS[self.current_position - 1]
+        let main_index = self.subset_item_count * self.current_position
+        self.end_index = main_index - 1
+        self.start_index = main_index - self.subset_item_count
         
-        self.setDataCount(Int(sliderX.value), range: 30)
+        print("Total: \(self.total_item_count)")
+        print("Subset Total: \(self.subset_item_count)")
+        print("Current Position: \(self.current_position)")
+        print("Start Index: \(self.start_index)")
+        print("End Index: \(self.end_index)")
+        self.setDataCount()
     }
     
-    func setDataCount(_ count: Int, range: UInt32) {
-        
+    @IBAction func previousTimeFrameAction(_ sender: Any) {
+        /* Action method for toggling the previous time frame before the current one
+         
+         args:
+            - sender (Any)
+         returns:
+            - void
+         */
+        if (self.current_position == 1) { return }
+        self.current_position = self.current_position - 1
+        self.updateChartData()
+    }
+    
+    @IBAction func nextTimeFrameAction(_ sender: Any) {
+        /* Action method for toggling the next time frame after the current one
+         
+         args:
+            - sender (Any)
+         returns:
+            - void
+         */
+        if (self.current_position == 4) { return }
+        self.current_position = self.current_position + 1
+        self.updateChartData()
+    }
+    
+    func setDataCount() {
         if (self.data != nil) {
-            let from = 0
-            var to = 0
-            if (count < self.data.count) {
-                to = count
-            } else {
-                to = self.data.count - 1
-            }
-            
-            let dataEntries = stride(from: from, to: to, by: 1).map { (index) -> ChartDataEntry in
-                return ChartDataEntry(x: Double(index), y: Double(self.data[index] as! Int))
+            let new_subset = self.data[self.start_index...self.end_index]
+            let dataEntries = stride(from: self.start_index, to: self.end_index, by: 1).map { (index) -> ChartDataEntry in
+                return ChartDataEntry(x: Double(index), y: Double(new_subset[index] as! Int))
             }
             
             let set1 = LineChartDataSet(values: dataEntries, label: "Object \(self.objectIndex) DataSet")
@@ -166,10 +205,5 @@ class LineChartTimeViewController: DemoBaseViewController {
         default:
             super.handleOption(option, forChartView: chartView)
         }
-    }
-    
-    @IBAction func slidersValueChanged(_ sender: Any?) {
-        sliderTextX.text = "\(Int(sliderX.value))"
-        self.updateChartData()
     }
 }

@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum commpressionRates: Int {
+    case easy = 100, normal = 400, hard = 700
+}
+
 class CSVDataParser {
     /* Class to help with parsing data from a csv file
      
@@ -87,7 +91,9 @@ class CSVDataParser {
                     result.append([])
                 }
                 let value = Int(cols[index])
-                result[index].append(value!)
+                if value != nil {
+                    result[index].append(value!)
+                }
             }
         }
         return result
@@ -127,7 +133,7 @@ class CSVDataParser {
         }
     }
     
-    func getDataForObject(index: Int) -> [Int] {
+    func getDataForObject(index: Int, compression_rate: commpressionRates) -> [Int] {
         /* Method to get data for a particular object index
          
          args:
@@ -137,10 +143,29 @@ class CSVDataParser {
          */
         if self.data != nil {
             // Data exists. return it
-            return self.data[index]
+            let compressed_data = self.compress(data: self.data[index], rate: compression_rate)
+            return compressed_data
         } else {
             // Error getting data. return empty list
             return []
         }
+    }
+    
+    func compress(data: [Int], rate: commpressionRates) -> [Int] {
+        var counter = 0
+        var currentTotal = 0
+        var return_data = [Int]()
+        for val in data {
+            if counter < rate.rawValue {
+                currentTotal += val
+                counter += 1
+            } else {
+                let newdata = Int(currentTotal / rate.rawValue)
+                return_data.append(newdata)
+                counter = 0
+                currentTotal = 0
+            }
+        }
+        return return_data
     }
 }

@@ -78,33 +78,44 @@
 		D7C669CA20A1E55D00D1224F /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C669C720A1E55D00D1224F /* RadarMarkerView.swift */; };
 		D7C669CB20A1E55D00D1224F /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C669C820A1E55D00D1224F /* BalloonMarker.swift */; };
 		D7DE6F27207EED9C00250BE7 /* csvparser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DE6F26207EED9C00250BE7 /* csvparser.swift */; };
+		D7E5065420AB680C00026320 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E5065120AB67F800026320 /* Charts.framework */; };
+		D7E5065520AB680C00026320 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7E5065120AB67F800026320 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7E5065A20AB6A6500026320 /* DateTimeConstantsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5065920AB6A6500026320 /* DateTimeConstantsList.swift */; };
 		D7F492722087A66500BD2B4E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F492712087A66500BD2B4E /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D7344F3920A207A400DDF516 /* PBXContainerItemProxy */ = {
+		D7E5065020AB67F800026320 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D7344F3420A207A400DDF516 /* Charts.xcodeproj */;
+			containerPortal = D7E5064B20AB67F800026320 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
 			remoteInfo = Charts;
 		};
-		D7344F3B20A207A400DDF516 /* PBXContainerItemProxy */ = {
+		D7E5065220AB67F800026320 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D7344F3420A207A400DDF516 /* Charts.xcodeproj */;
+			containerPortal = D7E5064B20AB67F800026320 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
 			remoteInfo = ChartsTests;
 		};
+		D7E5065620AB680C00026320 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7E5064B20AB67F800026320 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A58A4ED274A941CA248EA921;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D7C6695020A1E36400D1224F /* Embed Frameworks */ = {
+		D7E5065820AB680C00026320 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D7E5065520AB680C00026320 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,7 +129,6 @@
 		75801F2C206AD25D0023391A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75801F2F206AD25D0023391A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75801F31206AD25D0023391A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7344F3420A207A400DDF516 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		D73F84F2207C644D006B0CA4 /* effectUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = effectUtilities.swift; sourceTree = "<group>"; };
 		D73F84F7207C67AB006B0CA4 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
 		D73F84F9207C6941006B0CA4 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +136,7 @@
 		D73F84FD207C77DD006B0CA4 /* SuccessfulSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulSetupViewController.swift; sourceTree = "<group>"; };
 		D75A5E3C20A14AA5003A4FC7 /* SelectObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectObjectViewController.swift; sourceTree = "<group>"; };
 		D77A55C5208BE11900BB9EB6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		D77A55C7208C414F00BB9EB6 /* SelectDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
+		D77A55C7208C414F00BB9EB6 /* SelectDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		D7C6695420A1E43600D1224F /* DemoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoListViewController.xib; sourceTree = "<group>"; };
 		D7C6695620A1E45800D1224F /* RadarMarkerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadarMarkerView.xib; sourceTree = "<group>"; };
 		D7C6695920A1E47C00D1224F /* CombinedChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CombinedChartViewController.xib; sourceTree = "<group>"; };
@@ -186,6 +196,8 @@
 		D7C669C720A1E55D00D1224F /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMarkerView.swift; sourceTree = "<group>"; };
 		D7C669C820A1E55D00D1224F /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		D7DE6F26207EED9C00250BE7 /* csvparser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = csvparser.swift; sourceTree = "<group>"; };
+		D7E5064B20AB67F800026320 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		D7E5065920AB6A6500026320 /* DateTimeConstantsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeConstantsList.swift; sourceTree = "<group>"; };
 		D7F492712087A66500BD2B4E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E5065420AB680C00026320 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +216,7 @@
 		75801F19206AD25D0023391A = {
 			isa = PBXGroup;
 			children = (
-				D7344F3420A207A400DDF516 /* Charts.xcodeproj */,
+				D7E5064B20AB67F800026320 /* Charts.xcodeproj */,
 				75801F24206AD25D0023391A /* MBRACE-mobile-app */,
 				75801F23206AD25D0023391A /* Products */,
 			);
@@ -239,17 +252,9 @@
 				D77A55C5208BE11900BB9EB6 /* SettingsViewController.swift */,
 				D77A55C7208C414F00BB9EB6 /* SelectDateViewController.swift */,
 				D75A5E3C20A14AA5003A4FC7 /* SelectObjectViewController.swift */,
+				D7E5065920AB6A6500026320 /* DateTimeConstantsList.swift */,
 			);
 			path = "MBRACE-mobile-app";
-			sourceTree = "<group>";
-		};
-		D7344F3520A207A400DDF516 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D7344F3A20A207A400DDF516 /* Charts.framework */,
-				D7344F3C20A207A400DDF516 /* ChartsTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		D73F84F4207C6452006B0CA4 /* Utilities */ = {
@@ -354,6 +359,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		D7E5064C20AB67F800026320 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7E5065120AB67F800026320 /* Charts.framework */,
+				D7E5065320AB67F800026320 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,11 +378,12 @@
 				75801F1E206AD25D0023391A /* Sources */,
 				75801F1F206AD25D0023391A /* Frameworks */,
 				75801F20206AD25D0023391A /* Resources */,
-				D7C6695020A1E36400D1224F /* Embed Frameworks */,
+				D7E5065820AB680C00026320 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D7E5065720AB680C00026320 /* PBXTargetDependency */,
 			);
 			name = "MBRACE-mobile-app";
 			productName = "MBRACE-mobile-app";
@@ -382,7 +397,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Kamal Ali";
 				TargetAttributes = {
 					75801F21206AD25D0023391A = {
@@ -404,8 +419,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = D7344F3520A207A400DDF516 /* Products */;
-					ProjectRef = D7344F3420A207A400DDF516 /* Charts.xcodeproj */;
+					ProductGroup = D7E5064C20AB67F800026320 /* Products */;
+					ProjectRef = D7E5064B20AB67F800026320 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -416,18 +431,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D7344F3A20A207A400DDF516 /* Charts.framework */ = {
+		D7E5065120AB67F800026320 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = D7344F3920A207A400DDF516 /* PBXContainerItemProxy */;
+			remoteRef = D7E5065020AB67F800026320 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D7344F3C20A207A400DDF516 /* ChartsTests.xctest */ = {
+		D7E5065320AB67F800026320 /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = D7344F3B20A207A400DDF516 /* PBXContainerItemProxy */;
+			remoteRef = D7E5065220AB67F800026320 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -488,6 +503,7 @@
 				D7C669B420A1E4EF00D1224F /* PieChartViewController.swift in Sources */,
 				D7C669B320A1E4EF00D1224F /* BubbleChartViewController.swift in Sources */,
 				D7C669A520A1E4EF00D1224F /* LineChartTimeViewController.swift in Sources */,
+				D7E5065A20AB6A6500026320 /* DateTimeConstantsList.swift in Sources */,
 				D7C669A320A1E4EF00D1224F /* LineChart2ViewController.swift in Sources */,
 				D73F84FC207C6FC9006B0CA4 /* server.swift in Sources */,
 				D7C669AE20A1E4EF00D1224F /* MultipleLinesChartViewController.swift in Sources */,
@@ -524,6 +540,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D7E5065720AB680C00026320 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = D7E5065620AB680C00026320 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		75801F29206AD25D0023391A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -558,6 +582,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -565,6 +590,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -615,6 +641,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -622,6 +649,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -657,6 +685,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QAUJP6N6W5;
 				INFOPLIST_FILE = "MBRACE-mobile-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MBRACE-mobile-app.MBRACE-mobile-app";
@@ -672,6 +701,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QAUJP6N6W5;
 				INFOPLIST_FILE = "MBRACE-mobile-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MBRACE-mobile-app.MBRACE-mobile-app";
